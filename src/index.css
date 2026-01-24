@@ -2,95 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Puerto Vallarta Safety Guide - Travel Blog Design System */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Ocean-inspired tropical palette */
+    --background: 40 33% 98%;
+    --foreground: 210 29% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 29% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 29% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Ocean teal as primary */
+    --primary: 177 69% 41%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Coral sunset accent */
+    --secondary: 16 85% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm sand tones */
+    --muted: 40 30% 94%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Tropical accent */
+    --accent: 45 93% 58%;
+    --accent-foreground: 210 29% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Soft borders */
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 177 69% 41%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
+
+    /* Custom travel colors */
+    --ocean: 177 69% 41%;
+    --ocean-dark: 177 69% 32%;
+    --ocean-light: 177 55% 92%;
+    --coral: 16 85% 60%;
+    --coral-dark: 16 85% 50%;
+    --coral-light: 16 60% 95%;
+    --sand: 40 45% 92%;
+    --sand-dark: 40 30% 82%;
+    --palm: 140 45% 35%;
+    --palm-light: 140 35% 92%;
+    --sunset: 30 95% 55%;
+    --sky: 200 85% 60%;
+
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', -apple-system, sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 29% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 29% 15% / 0.08), 0 2px 4px -2px hsl(210 29% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(210 29% 15% / 0.1), 0 4px 6px -4px hsl(210 29% 15% / 0.08);
+    --shadow-xl: 0 20px 25px -5px hsl(210 29% 15% / 0.1), 0 8px 10px -6px hsl(210 29% 15% / 0.08);
+    --shadow-card: 0 2px 8px -2px hsl(210 29% 15% / 0.1), 0 6px 20px -4px hsl(210 29% 15% / 0.08);
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(210 29% 15% / 0.2) 0%, hsl(210 29% 15% / 0.7) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(177 69% 41%) 0%, hsl(200 85% 60%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(16 85% 60%) 0%, hsl(30 95% 55%) 100%);
+    --gradient-tropical: linear-gradient(135deg, hsl(177 69% 41%) 0%, hsl(140 45% 35%) 100%);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 210 29% 10%;
+    --foreground: 40 33% 98%;
+    --card: 210 25% 14%;
+    --card-foreground: 40 33% 98%;
+    --popover: 210 25% 14%;
+    --popover-foreground: 40 33% 98%;
+    --primary: 177 69% 50%;
+    --primary-foreground: 210 29% 10%;
+    --secondary: 16 75% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 25% 20%;
+    --muted-foreground: 40 20% 70%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 210 29% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 210 25% 22%;
+    --input: 210 25% 22%;
+    --ring: 177 69% 50%;
   }
 }
 
@@ -99,7 +112,349 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.5);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.7);
+  }
+}
+
+@layer components {
+  /* Hero section styles */
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+
+  /* Card variations */
+  .card-elevated {
+    @apply bg-card rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-bordered {
+    @apply bg-card rounded-xl border border-border;
+  }
+
+  /* Safety rating badge */
+  .safety-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-sm;
+    background: linear-gradient(135deg, hsl(var(--palm)) 0%, hsl(var(--ocean)) 100%);
+    color: white;
+  }
+
+  /* Table of contents */
+  .toc-link {
+    @apply block py-2 px-4 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200;
+  }
+
+  .toc-link.active {
+    @apply text-primary bg-ocean-light font-medium;
+    background: hsl(var(--ocean-light));
+  }
+
+  /* Content sections */
+  .content-section {
+    @apply py-12 md:py-16;
+  }
+
+  .content-section:nth-child(even) {
+    @apply bg-muted/30;
+  }
+
+  /* FAQ accordion */
+  .faq-item {
+    @apply border-b border-border last:border-0;
+  }
+
+  /* Image with caption */
+  .figure-caption {
+    @apply text-sm text-muted-foreground mt-3 text-center italic;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-item {
+    @apply text-sm text-muted-foreground hover:text-primary transition-colors;
+  }
+
+  .breadcrumb-separator {
+    @apply mx-2 text-muted-foreground/50;
+  }
+
+  /* Author box */
+  .author-box {
+    @apply flex items-start gap-4 p-6 rounded-xl;
+    background: linear-gradient(135deg, hsl(var(--ocean-light)) 0%, hsl(var(--sand)) 100%);
+  }
+
+  /* Sticky navigation */
+  .sticky-nav {
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-md;
+    transition: transform 0.3s ease;
+  }
+
+  /* Info boxes */
+  .info-box {
+    @apply p-5 rounded-xl border-l-4;
+  }
+
+  .info-box-tip {
+    @apply bg-palm-light border-palm;
+    border-left-color: hsl(var(--palm));
+    background: hsl(var(--palm-light));
+  }
+
+  .info-box-warning {
+    @apply bg-coral-light border-coral;
+    border-left-color: hsl(var(--coral));
+    background: hsl(var(--coral-light));
+  }
+
+  .info-box-info {
+    @apply bg-ocean-light border-ocean;
+    border-left-color: hsl(var(--ocean));
+    background: hsl(var(--ocean-light));
+  }
+
+  /* Rating stars */
+  .rating-star {
+    color: hsl(var(--accent));
+  }
+
+  /* Section anchor offset for fixed header */
+  .section-anchor {
+    scroll-margin-top: 100px;
+  }
+
+  /* Comparison table */
+  .comparison-table {
+    @apply w-full border-collapse;
+  }
+
+  .comparison-table th {
+    @apply bg-primary text-primary-foreground p-4 text-left font-semibold;
+  }
+
+  .comparison-table td {
+    @apply p-4 border-b border-border;
+  }
+
+  .comparison-table tr:hover td {
+    @apply bg-muted/50;
+  }
+
+  /* Button variations for hero */
+  .btn-hero {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-base transition-all duration-300;
+    background: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    box-shadow: 0 4px 14px 0 hsl(var(--secondary) / 0.4);
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 hsl(var(--secondary) / 0.5);
+  }
+
+  /* Navigation link */
+  .nav-link {
+    @apply text-foreground/80 hover:text-primary font-medium transition-colors duration-200;
+  }
+
+  .nav-link.active {
+    @apply text-primary;
+  }
+}
+
+@layer utilities {
+  /* Background utilities */
+  .bg-ocean {
+    background-color: hsl(var(--ocean));
+  }
+
+  .bg-ocean-light {
+    background-color: hsl(var(--ocean-light));
+  }
+
+  .bg-coral {
+    background-color: hsl(var(--coral));
+  }
+
+  .bg-coral-light {
+    background-color: hsl(var(--coral-light));
+  }
+
+  .bg-sand {
+    background-color: hsl(var(--sand));
+  }
+
+  .bg-palm {
+    background-color: hsl(var(--palm));
+  }
+
+  .bg-palm-light {
+    background-color: hsl(var(--palm-light));
+  }
+
+  /* Text utilities */
+  .text-ocean {
+    color: hsl(var(--ocean));
+  }
+
+  .text-ocean-dark {
+    color: hsl(var(--ocean-dark));
+  }
+
+  .text-coral {
+    color: hsl(var(--coral));
+  }
+
+  .text-palm {
+    color: hsl(var(--palm));
+  }
+
+  /* Gradient text */
+  .text-gradient-ocean {
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sunset {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Prose styles for article content */
+  .prose-travel {
+    @apply max-w-none;
+  }
+
+  .prose-travel p {
+    @apply text-foreground/90 text-lg leading-relaxed mb-6;
+  }
+
+  .prose-travel h2 {
+    @apply mt-12 mb-6 text-foreground;
+  }
+
+  .prose-travel h3 {
+    @apply mt-8 mb-4 text-foreground;
+  }
+
+  .prose-travel h4 {
+    @apply mt-6 mb-3 text-foreground;
+  }
+
+  .prose-travel ul, .prose-travel ol {
+    @apply my-6 space-y-3;
+  }
+
+  .prose-travel li {
+    @apply text-lg text-foreground/90 pl-2;
+  }
+
+  .prose-travel img {
+    @apply rounded-xl shadow-lg my-8;
+  }
+
+  .prose-travel blockquote {
+    @apply border-l-4 border-primary pl-6 my-8 italic text-muted-foreground;
+  }
+
+  .prose-travel a {
+    @apply text-primary hover:text-ocean-dark underline underline-offset-2 transition-colors;
+  }
+
+  .prose-travel table {
+    @apply w-full my-8 rounded-lg overflow-hidden;
   }
 }
