@@ -107,7 +107,7 @@ const Index = () => {
   >
     Travelled Road has a detailed guide on visiting Puerto Vallarta safely
   </a>
-  that’s worth reading alongside this article.
+   that’s worth reading alongside this article.
 </p>
 
 
