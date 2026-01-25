@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.travelledroad.com/is-puerto-vallarta-safe-for-visit/$1",
+      "statusCode": 301
+    }
+  ]
+}
