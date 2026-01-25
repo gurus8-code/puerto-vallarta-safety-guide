@@ -105,7 +105,7 @@ const Index = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Travelled Road has a detailed guide on visiting Puerto Vallarta safely
+    Travelled Road has a detailed guide on visiting Puerto Vallarta safely 
   </a>
    that’s worth reading alongside this article.
 </p>
