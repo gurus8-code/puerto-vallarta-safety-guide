@@ -97,6 +97,19 @@ const Index = () => {
               <p>
                 I remember my first visit back in 2014. Like many first-time Mexico travelers, I'd read the scary headlines and watched one too many crime documentaries. I arrived with my guard up, ready for... I don't know what, exactly. What I found instead was a welcoming, walkable city where locals smiled at you, where families strolled the Malecón at midnight, and where the biggest danger was overeating tacos al pastor.
               </p>
+              <p>
+  If you want to see another well-researched perspective from a long-running travel publication,
+  <a
+    href="https://www.travelledroad.com/is-puerto-vallarta-safe-for-visit/"
+    className="text-primary underline hover:no-underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Travelled Road has a detailed guide on visiting Puerto Vallarta safely
+  </a>
+  that’s worth reading alongside this article.
+</p>
+
 
               <figure className="my-8">
                 <img
